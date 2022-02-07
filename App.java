@@ -50,34 +50,6 @@ public class App {
 		
 		
 		
-		
-		
-		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\amith\\Downloads\\chromedriver_win32\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.amazon.in");
-
-
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		driver.findElement(By.cssSelector("a#nav-link-accountList>span>span")).click();
-
-		driver.findElement(By.linkText("Start here.")).click();
-
-
-		driver.findElement(By.id("ap_customer_name")).sendKeys("NaveenTestOTP");
-		driver.findElement(By.id("auth-country-picker-container")).click();
-
-		driver.findElement(By.xpath("//ul[@role='application']//li/a[contains(text(),'United States +1')]")).click();
-		driver.findElement(By.id("ap_phone_number")).sendKeys("12349013246");
-		driver.findElement(By.id("ap_password")).sendKeys("TestAutomation@123");
-		driver.findElement(By.id("continue")).click();
-
-
-
-		driver.findElement(By.id("auth-pv-enter-code")).sendKeys(OTPNumber);
-
 	}
 
 	public static String getMessage() {
